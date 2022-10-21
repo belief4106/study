@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: jdbc
+  application:
+    name: config-jdbc-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    config:
+      label: master
+      server:
+        jdbc: true
